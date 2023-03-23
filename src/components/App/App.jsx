@@ -1,9 +1,22 @@
 import { Container } from './App.styled'; 
+import { Component } from 'react';
+import { nanoid } from 'nanoid'; 
 
-export const App = () => {
-  return (
-    <Container>
-      React homework template
-    </Container>
-  );
+class App extends Component {
+
+    state = {
+      contacts: [],
+      name: ''
+    }
+
+
+  render() {
+    return (
+      <Container>
+        Hello baby
+      </Container>
+    );
+  } 
 };
+
+export default App;
