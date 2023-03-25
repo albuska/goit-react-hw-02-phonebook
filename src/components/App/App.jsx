@@ -23,11 +23,11 @@ class App extends Component {
       id: nanoid(),
     };
 
-    this.setState(prevState => {
-      return {
-        contacts: [newContact, ...prevState.contacts],
-      };
-    });
+    this.state.contacts.filter(contact => contact.name === data.name).length
+      ? alert(`${newContact.name} is already in contacts`)
+      : this.setState(prevState => ({
+          contacts: [newContact, ...prevState.contacts],
+        }));
   };
 
   handleFilterInput = event => {
